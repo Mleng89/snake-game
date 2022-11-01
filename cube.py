@@ -1,0 +1,9 @@
+class Cube(object):
+    def __init__(self, start, directionX=1, directionY=0, color=(255, 0, 0)):
+        ...
+
+    def move(self, directionX, directionY):
+        ...
+
+    def draw(self, surface, eyes=False):
+        ...
