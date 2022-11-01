@@ -21,12 +21,12 @@ def draw_Grid(width, rows, surface):
         x = x + size_between
         y = y + size_between
 
-        pg.draw.line(surface, WHITE, (x, 0), (x, WIDTH))
-        pg.draw.line(surface, WHITE, (0, y), (WIDTH, y))
+        pg.draw.line(surface, WHITE, (x, 0), (x, WIDTH))  # vertical
+        pg.draw.line(surface, WHITE, (0, y), (WIDTH, y))  # horizontal
 
 
 def reset_Grid(surface):
-    WINDOW.fill(BLACK)
+    surface.fill(BLACK)
     draw_Grid(WIDTH, ROWS, surface)
     pg.display.update()
 
@@ -46,10 +46,12 @@ def main():
     while True:
         pg.time.delay(50)  # Delay app -- does not run too fast (lower number = faster)
         clock.tick(60)  # Lower number makes it slower
-        reset_Grid(WINDOW)
+        sss.move()
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 pg.quit()
+
+        reset_Grid(WINDOW)
 
 
 if __name__ == "__main__":
