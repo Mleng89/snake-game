@@ -1,4 +1,4 @@
-class Cube(object):
+class Cube:
     def __init__(self, start, direction_X=1, direction_Y=0, color=(255, 0, 0)):
         self.start = start
         self.direction_X = direction_X
